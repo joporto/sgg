@@ -17,11 +17,11 @@ public class testQueryItem {
     public static void main(String[] args) {
         try 
         {
-           dao.SexoDAO sdao = new dao.SexoDAO();
+           dao.RazaDAO rdao = new dao.RazaDAO();
            
-            for (edm.Sexo arg : sdao.getList()) {
+            for (edm.Raza arg : rdao.getList()) {
                 
-                System.out.println(arg.getSexoDs());
+                System.out.println(arg.getRazaNombre());
             }
            
          
