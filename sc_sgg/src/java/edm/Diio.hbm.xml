@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-feb-2016 0:18:44 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="edm.Diio" table="DIIO" catalog="CLARITYCOW" optimistic-lock="version">
+        <id name="diioId" type="int">
+            <column name="DIIO_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="proveedorId" type="java.lang.Integer">
+            <column name="PROVEEDOR_ID" />
+        </property>
+        <property name="eventoId" type="java.lang.Integer">
+            <column name="EVENTO_ID" />
+        </property>
+        <property name="diioEstado" type="java.lang.Integer">
+            <column name="DIIO_ESTADO" />
+        </property>
+        <property name="diioFechaCompra" type="date">
+            <column name="DIIO_FECHA_COMPRA" length="10" />
+        </property>
+        <property name="diioFechaIngreso" type="date">
+            <column name="DIIO_FECHA_INGRESO" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

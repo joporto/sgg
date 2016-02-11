@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-feb-2016 0:18:44 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="edm.EstadoAnimal" table="ESTADO_ANIMAL" catalog="CLARITYCOW" optimistic-lock="version">
+        <id name="estadoanimalId" type="int">
+            <column name="ESTADOANIMAL_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="tipoestadoId" type="java.lang.Integer">
+            <column name="TIPOESTADO_ID" />
+        </property>
+        <property name="estadoanimalDs" type="string">
+            <column name="ESTADOANIMAL_DS" length="25" />
+        </property>
+        <property name="estadoanimalStatus" type="java.lang.Integer">
+            <column name="ESTADOANIMAL_STATUS" />
+        </property>
+    </class>
+</hibernate-mapping>

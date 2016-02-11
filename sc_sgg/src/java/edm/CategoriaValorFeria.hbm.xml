@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-feb-2016 0:18:44 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="edm.CategoriaValorFeria" table="CATEGORIA_VALOR_FERIA" catalog="CLARITYCOW" optimistic-lock="version">
+        <id name="categoriavalorId" type="int">
+            <column name="CATEGORIAVALOR_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="categoriavalorValor" type="int">
+            <column name="CATEGORIAVALOR_VALOR" not-null="true" />
+        </property>
+        <property name="categoriavalorFecha" type="date">
+            <column name="CATEGORIAVALOR_FECHA" length="10" not-null="true" />
+        </property>
+        <property name="categoriavalorStatus" type="java.lang.Integer">
+            <column name="CATEGORIAVALOR_STATUS" />
+        </property>
+    </class>
+</hibernate-mapping>

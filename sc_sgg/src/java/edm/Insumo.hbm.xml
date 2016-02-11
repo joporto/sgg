@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-feb-2016 0:18:44 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="edm.Insumo" table="INSUMO" catalog="CLARITYCOW" optimistic-lock="version">
+        <id name="insumoId" type="int">
+            <column name="INSUMO_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="tipoinsumoId" type="java.lang.Integer">
+            <column name="TIPOINSUMO_ID" />
+        </property>
+        <property name="insumoCodigoSap" type="java.lang.Integer">
+            <column name="INSUMO_CODIGO_SAP" />
+        </property>
+        <property name="insumoNombre" type="string">
+            <column name="INSUMO_NOMBRE" length="50" />
+        </property>
+        <property name="insumoUnidadMedida" type="string">
+            <column name="INSUMO_UNIDAD_MEDIDA" length="25" />
+        </property>
+        <property name="insumoStatus" type="java.lang.Integer">
+            <column name="INSUMO_STATUS" />
+        </property>
+        <property name="insumoCantidad" type="java.lang.Integer">
+            <column name="INSUMO_CANTIDAD" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-feb-2016 0:18:44 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="edm.Ingrediente" table="INGREDIENTE" catalog="CLARITYCOW" optimistic-lock="version">
+        <id name="ingredienteId" type="int">
+            <column name="INGREDIENTE_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="ingredienteDs" type="string">
+            <column name="INGREDIENTE_DS" length="25" />
+        </property>
+        <property name="ingredienteStatus" type="java.lang.Integer">
+            <column name="INGREDIENTE_STATUS" />
+        </property>
+    </class>
+</hibernate-mapping>

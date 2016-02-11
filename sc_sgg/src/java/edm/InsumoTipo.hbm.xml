@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-feb-2016 0:18:44 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="edm.InsumoTipo" table="INSUMO_TIPO" catalog="CLARITYCOW" optimistic-lock="version">
+        <id name="insumotipoId" type="int">
+            <column name="INSUMOTIPO_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="insumotipoDs" type="string">
+            <column name="INSUMOTIPO_DS" length="50" />
+        </property>
+        <property name="insumotipoStatus" type="java.lang.Integer">
+            <column name="INSUMOTIPO_STATUS" />
+        </property>
+    </class>
+</hibernate-mapping>

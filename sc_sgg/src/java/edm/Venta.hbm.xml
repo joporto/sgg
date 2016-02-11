@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-feb-2016 0:18:44 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="edm.Venta" table="VENTA" catalog="CLARITYCOW" optimistic-lock="version">
+        <id name="ventaId" type="int">
+            <column name="VENTA_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="transporteId" type="java.lang.Integer">
+            <column name="TRANSPORTE_ID" />
+        </property>
+        <property name="clienteId" type="java.lang.Integer">
+            <column name="CLIENTE_ID" />
+        </property>
+        <property name="ventaFecha" type="date">
+            <column name="VENTA_FECHA" length="10" not-null="true" />
+        </property>
+        <property name="ventaFactura" type="java.lang.Integer">
+            <column name="VENTA_FACTURA" />
+        </property>
+        <property name="ventaValorFlete" type="java.lang.Integer">
+            <column name="VENTA_VALOR_FLETE" />
+        </property>
+        <property name="ventaComision" type="java.lang.Integer">
+            <column name="VENTA_COMISION" />
+        </property>
+        <property name="ventaExamenes" type="java.lang.Integer">
+            <column name="VENTA_EXAMENES" />
+        </property>
+        <property name="ventaPrecioNeto" type="java.lang.Integer">
+            <column name="VENTA_PRECIO_NETO" />
+        </property>
+    </class>
+</hibernate-mapping>

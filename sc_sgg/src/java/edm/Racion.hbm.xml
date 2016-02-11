@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-feb-2016 0:18:44 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="edm.Racion" table="RACION" catalog="CLARITYCOW" optimistic-lock="version">
+        <id name="racionId" type="int">
+            <column name="RACION_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="racionDs" type="string">
+            <column name="RACION_DS" length="100" />
+        </property>
+        <property name="racionGananciaDiaria" type="java.lang.Float">
+            <column name="RACION_GANANCIA_DIARIA" precision="12" scale="0" />
+        </property>
+        <property name="racionTeoEmKgMs" type="java.lang.Float">
+            <column name="RACION_TEO_EM_KG_MS" precision="12" scale="0" />
+        </property>
+        <property name="racionPorcProteina" type="java.lang.Float">
+            <column name="RACION_PORC_PROTEINA" precision="12" scale="0" />
+        </property>
+        <property name="racionFecha" type="date">
+            <column name="RACION_FECHA" length="10" />
+        </property>
+        <property name="racionStatus" type="java.lang.Integer">
+            <column name="RACION_STATUS" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-feb-2016 0:18:44 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="edm.RacionIngrediente" table="RACION_INGREDIENTE" catalog="CLARITYCOW" optimistic-lock="version">
+        <id name="racioningId" type="int">
+            <column name="RACIONING_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="racionId" type="java.lang.Integer">
+            <column name="RACION_ID" />
+        </property>
+        <property name="ingredienteId" type="java.lang.Integer">
+            <column name="INGREDIENTE_ID" />
+        </property>
+        <property name="racioningKilosFrescos" type="java.lang.Integer">
+            <column name="RACIONING_KILOS_FRESCOS" />
+        </property>
+        <property name="racioningCostoKg" type="java.lang.Float">
+            <column name="RACIONING_COSTO_KG" precision="12" scale="0" />
+        </property>
+        <property name="racioningPorcMs" type="java.lang.Float">
+            <column name="RACIONING_PORC_MS" precision="12" scale="0" />
+        </property>
+        <property name="racioningEMentKgMs" type="java.lang.Float">
+            <column name="RACIONING_E_MENT_KG_MS" precision="12" scale="0" />
+        </property>
+        <property name="racioningProtKgMs" type="java.lang.Float">
+            <column name="RACIONING_PROT_KG_MS" precision="12" scale="0" />
+        </property>
+        <property name="racioningStatus" type="java.lang.Integer">
+            <column name="RACIONING_STATUS" />
+        </property>
+    </class>
+</hibernate-mapping>

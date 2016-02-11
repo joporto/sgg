@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-feb-2016 0:18:44 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="edm.Establecimiento" table="ESTABLECIMIENTO" catalog="CLARITYCOW" optimistic-lock="version">
+        <id name="rupId" type="int">
+            <column name="RUP_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="tiporupId" type="java.lang.Integer">
+            <column name="TIPORUP_ID" />
+        </property>
+        <property name="rupNombre" type="string">
+            <column name="RUP_NOMBRE" length="50" />
+        </property>
+        <property name="rupComuna" type="string">
+            <column name="RUP_COMUNA" length="50" />
+        </property>
+        <property name="rupDireccion" type="string">
+            <column name="RUP_DIRECCION" length="100" />
+        </property>
+        <property name="rupSuperficie" type="java.lang.Integer">
+            <column name="RUP_SUPERFICIE" />
+        </property>
+        <property name="rupCargasugerida" type="java.lang.Integer">
+            <column name="RUP_CARGASUGERIDA" />
+        </property>
+        <property name="rupKgMsHa" type="java.lang.Integer">
+            <column name="RUP_KG_MS_HA" />
+        </property>
+        <property name="rupStatus" type="java.lang.Integer">
+            <column name="RUP_STATUS" />
+        </property>
+    </class>
+</hibernate-mapping>

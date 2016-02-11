@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-feb-2016 0:18:44 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="edm.Vehiculo" table="VEHICULO" catalog="CLARITYCOW" optimistic-lock="version">
+        <id name="vehiculoId" type="int">
+            <column name="VEHICULO_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="tipovehiculoId" type="int">
+            <column name="TIPOVEHICULO_ID" not-null="true" />
+        </property>
+        <property name="vehiculoPatente" type="string">
+            <column name="VEHICULO_PATENTE" length="10" not-null="true" />
+        </property>
+        <property name="vehiculoStatus" type="java.lang.Integer">
+            <column name="VEHICULO_STATUS" />
+        </property>
+    </class>
+</hibernate-mapping>

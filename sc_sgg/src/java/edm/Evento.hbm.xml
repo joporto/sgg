@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-feb-2016 0:18:44 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="edm.Evento" table="EVENTO" catalog="CLARITYCOW" optimistic-lock="version">
+        <id name="eventoId" type="int">
+            <column name="EVENTO_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="animalId" type="java.lang.Integer">
+            <column name="ANIMAL_ID" />
+        </property>
+        <property name="eventotipoId" type="java.lang.Integer">
+            <column name="EVENTOTIPO_ID" />
+        </property>
+        <property name="estadoanimalId" type="java.lang.Integer">
+            <column name="ESTADOANIMAL_ID" />
+        </property>
+        <property name="categoriaId" type="java.lang.Integer">
+            <column name="CATEGORIA_ID" />
+        </property>
+        <property name="eventoDs" type="string">
+            <column name="EVENTO_DS" length="200" />
+        </property>
+        <property name="eventoFechaReg" type="date">
+            <column name="EVENTO_FECHA_REG" length="10" not-null="true" />
+        </property>
+        <property name="eventoFechaEvento" type="date">
+            <column name="EVENTO_FECHA_EVENTO" length="10" />
+        </property>
+        <property name="eventoValor" type="java.lang.Float">
+            <column name="EVENTO_VALOR" precision="12" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

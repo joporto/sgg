@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-feb-2016 0:18:44 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="edm.Sexo" table="SEXO" catalog="CLARITYCOW" optimistic-lock="version">
+        <id name="sexoId" type="int">
+            <column name="SEXO_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="sexoDs" type="string">
+            <column name="SEXO_DS" length="25" />
+        </property>
+        <property name="sexoStatus" type="java.lang.Integer">
+            <column name="SEXO_STATUS" />
+        </property>
+    </class>
+</hibernate-mapping>

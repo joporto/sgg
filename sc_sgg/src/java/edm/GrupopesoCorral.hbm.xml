@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-feb-2016 0:18:44 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="edm.GrupopesoCorral" table="GRUPOPESO_CORRAL" catalog="CLARITYCOW" optimistic-lock="version">
+        <id name="corralgrupopesoId" type="int">
+            <column name="CORRALGRUPOPESO_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="corralId" type="java.lang.Integer">
+            <column name="CORRAL_ID" />
+        </property>
+        <property name="grupopesoId" type="java.lang.Integer">
+            <column name="GRUPOPESO_ID" />
+        </property>
+        <property name="corralgrupopesoFecha" type="date">
+            <column name="CORRALGRUPOPESO_FECHA" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

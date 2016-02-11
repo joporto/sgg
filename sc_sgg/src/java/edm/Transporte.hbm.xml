@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-feb-2016 0:18:44 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="edm.Transporte" table="TRANSPORTE" catalog="CLARITYCOW" optimistic-lock="version">
+        <id name="transporteId" type="int">
+            <column name="TRANSPORTE_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="vehiculoId" type="int">
+            <column name="VEHICULO_ID" not-null="true" />
+        </property>
+        <property name="transporteRupOrigen" type="java.lang.Integer">
+            <column name="TRANSPORTE_RUP_ORIGEN" />
+        </property>
+        <property name="transporteRupDestino" type="java.lang.Integer">
+            <column name="TRANSPORTE_RUP_DESTINO" />
+        </property>
+        <property name="transportistaId" type="java.lang.Integer">
+            <column name="TRANSPORTISTA_ID" />
+        </property>
+        <property name="transporteFecha" type="date">
+            <column name="TRANSPORTE_FECHA" length="10" not-null="true" />
+        </property>
+        <property name="transporteFma" type="int">
+            <column name="TRANSPORTE_FMA" not-null="true" />
+        </property>
+        <property name="transporteGuiaDespacho" type="java.lang.Integer">
+            <column name="TRANSPORTE_GUIA_DESPACHO" />
+        </property>
+        <property name="transportePatenteAcoplado" type="string">
+            <column name="TRANSPORTE_PATENTE_ACOPLADO" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

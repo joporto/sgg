@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-feb-2016 0:18:44 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="edm.Animal" table="ANIMAL" catalog="CLARITYCOW" optimistic-lock="version">
+        <id name="animalId" type="int">
+            <column name="ANIMAL_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="sexoId" type="int">
+            <column name="SEXO_ID" not-null="true" />
+        </property>
+        <property name="razaId" type="int">
+            <column name="RAZA_ID" not-null="true" />
+        </property>
+        <property name="animalMadre" type="java.lang.Integer">
+            <column name="ANIMAL_MADRE" />
+        </property>
+        <property name="animalCategoriaActual" type="java.lang.Integer">
+            <column name="ANIMAL_CATEGORIA_ACTUAL" />
+        </property>
+        <property name="animalEstadoActual" type="java.lang.Integer">
+            <column name="ANIMAL_ESTADO_ACTUAL" />
+        </property>
+        <property name="animalRupActual" type="java.lang.Integer">
+            <column name="ANIMAL_RUP_ACTUAL" />
+        </property>
+        <property name="animalGrupopesoActual" type="java.lang.Integer">
+            <column name="ANIMAL_GRUPOPESO_ACTUAL" />
+        </property>
+        <property name="animalPesoActual" type="java.lang.Float">
+            <column name="ANIMAL_PESO_ACTUAL" precision="12" scale="0" />
+        </property>
+        <property name="animalDiioActual" type="java.lang.Integer">
+            <column name="ANIMAL_DIIO_ACTUAL" />
+        </property>
+        <property name="animalCastrado" type="java.lang.Integer">
+            <column name="ANIMAL_CASTRADO" />
+        </property>
+    </class>
+</hibernate-mapping>

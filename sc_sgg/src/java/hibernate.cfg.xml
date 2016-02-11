@@ -4,8 +4,41 @@
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://52.34.36.25:3306/CLARITYCOW?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/CLARITYCOW</property>
     <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">sc2015</property>
+    <property name="hibernate.connection.password"/>
+    <mapping resource="edm/Cliente.hbm.xml"/>
+    <mapping resource="edm/Corral.hbm.xml"/>
+    <mapping resource="edm/Insumo.hbm.xml"/>
+    <mapping resource="edm/Venta.hbm.xml"/>
+    <mapping resource="edm/Categoria.hbm.xml"/>
+    <mapping resource="edm/EventoTransporte.hbm.xml"/>
+    <mapping resource="edm/EventoGrupopeso.hbm.xml"/>
+    <mapping resource="edm/GrupopesoCorral.hbm.xml"/>
+    <mapping resource="edm/Diio.hbm.xml"/>
+    <mapping resource="edm/Sexo.hbm.xml"/>
+    <mapping resource="edm/Raza.hbm.xml"/>
+    <mapping resource="edm/RupTipo.hbm.xml"/>
+    <mapping resource="edm/Animal.hbm.xml"/>
+    <mapping resource="edm/Transportista.hbm.xml"/>
+    <mapping resource="edm/VehiculoTipo.hbm.xml"/>
+    <mapping resource="edm/EstadoAnimal.hbm.xml"/>
+    <mapping resource="edm/EventoRup.hbm.xml"/>
+    <mapping resource="edm/RacionGrupopeso.hbm.xml"/>
+    <mapping resource="edm/Evento.hbm.xml"/>
+    <mapping resource="edm/TipoEstado.hbm.xml"/>
+    <mapping resource="edm/EventoVenta.hbm.xml"/>
+    <mapping resource="edm/Vehiculo.hbm.xml"/>
+    <mapping resource="edm/CategoriaValorFeria.hbm.xml"/>
+    <mapping resource="edm/RacionIngrediente.hbm.xml"/>
+    <mapping resource="edm/GrupoPeso.hbm.xml"/>
+    <mapping resource="edm/Racion.hbm.xml"/>
+    <mapping resource="edm/Eventotipo.hbm.xml"/>
+    <mapping resource="edm/EventoInsumo.hbm.xml"/>
+    <mapping resource="edm/Transporte.hbm.xml"/>
+    <mapping resource="edm/InsumoTipo.hbm.xml"/>
+    <mapping resource="edm/Proveedor.hbm.xml"/>
+    <mapping resource="edm/Ingrediente.hbm.xml"/>
+    <mapping resource="edm/Establecimiento.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
