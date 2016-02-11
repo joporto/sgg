@@ -4,7 +4,7 @@
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/CLARITYCOW</property>
+    <property name="hibernate.connection.url">jdbc:mysql://52.34.36.25:3306/CLARITYCOW</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password"/>
     <mapping resource="edm/Cliente.hbm.xml"/>
