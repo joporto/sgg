@@ -9,8 +9,11 @@
             30
         </session-timeout>
     </session-config>
+<<<<<<< Updated upstream
     
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+=======
+>>>>>>> Stashed changes
 </web-app>
