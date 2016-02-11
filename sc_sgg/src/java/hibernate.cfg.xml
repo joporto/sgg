@@ -6,7 +6,7 @@
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://52.34.36.25:3306/CLARITYCOW</property>
     <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password"/>sc2015</property>
+    <property name="hibernate.connection.password">sc2015</property>
     <mapping resource="edm/Cliente.hbm.xml"/>
     <mapping resource="edm/Corral.hbm.xml"/>
     <mapping resource="edm/Insumo.hbm.xml"/>
