@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="CLARITYCOW"/>
+  <table-filter match-name="EVENTO_GRUPOPESO"/>
+  <table-filter match-name="CLIENTE"/>
+  <table-filter match-name="PROVEEDOR"/>
+  <table-filter match-name="RACION"/>
+  <table-filter match-name="ESTABLECIMIENTO"/>
+  <table-filter match-name="EVENTO_VENTA"/>
+  <table-filter match-name="EVENTOTIPO"/>
+  <table-filter match-name="CORRAL"/>
+  <table-filter match-name="VEHICULO"/>
+  <table-filter match-name="INSUMO_TIPO"/>
+  <table-filter match-name="EVENTO_INSUMO"/>
+  <table-filter match-name="SEXO"/>
+  <table-filter match-name="RUP_TIPO"/>
+  <table-filter match-name="RAZA"/>
+  <table-filter match-name="EVENTO_RUP"/>
+  <table-filter match-name="EVENTO_TRANSPORTE"/>
+  <table-filter match-name="DIIO"/>
+  <table-filter match-name="GRUPOPESO_CORRAL"/>
+  <table-filter match-name="TIPO_ESTADO"/>
+  <table-filter match-name="VENTA"/>
+  <table-filter match-name="INGREDIENTE"/>
+  <table-filter match-name="EVENTO"/>
+  <table-filter match-name="ANIMAL"/>
+  <table-filter match-name="ESTADO_ANIMAL"/>
+  <table-filter match-name="VEHICULO_TIPO"/>
+  <table-filter match-name="TRANSPORTE"/>
+  <table-filter match-name="GRUPO_PESO"/>
+  <table-filter match-name="RACION_INGREDIENTE"/>
+  <table-filter match-name="RACION_GRUPOPESO"/>
+  <table-filter match-name="TRANSPORTISTA"/>
+  <table-filter match-name="INSUMO"/>
+  <table-filter match-name="CATEGORIA"/>
+  <table-filter match-name="CATEGORIA_VALOR_FERIA"/>
+</hibernate-reverse-engineering>
