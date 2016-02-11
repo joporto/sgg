@@ -17,25 +17,19 @@ import java.sql.SQLException;
 
 public class testConnection {
     public static void main(String[] args) throws SQLException {
-        Connection conn = null;
-        ResultSet rs = null;
+       
         
         try {
-            String driverClassName="com.mysql.jdbc.Driver";
-            String driverUrl="jdbc:mysql://52.34.36.25:3306/CLARITYCOW";
-            Class.forName(driverClassName);
-            conn=DriverManager.getConnection(driverUrl,"root","sc2015");
+            
+            Connection conn = dal.Conexion.get();
             
             System.out.println("Conectado a la base de datos, las tablas encontradas son:");
             DatabaseMetaData dbm = conn.getMetaData();
-            rs = dbm.getTables(null, null, "%", new String[] { "TABLE" });
+            ResultSet rs = dbm.getTables(null, null, "%", new String[] { "TABLE" });
             while (rs.next()) { System.out.println(rs.getString("TABLE_NAME")); }
         } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            conn.close();
-            rs.close();
-        }
+            System.out.println(e.getMessage());
+        } 
     }
 }
 
