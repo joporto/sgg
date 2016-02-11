@@ -17,7 +17,13 @@ public class testQueryItem {
     public static void main(String[] args) {
         try 
         {
-            //probar aqui las querys que requieran. 
+           dao.SexoDAO sdao = new dao.SexoDAO();
+           
+            for (edm.Sexo arg : sdao.getList()) {
+                
+                System.out.println(arg.getSexoDs());
+            }
+           
          
         } catch (Exception e) {
             
