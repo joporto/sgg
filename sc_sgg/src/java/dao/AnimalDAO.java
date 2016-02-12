@@ -8,6 +8,7 @@ package dao;
 import dal.NewHibernateUtil;
 import java.util.List;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 
 /**
  *
@@ -89,4 +90,26 @@ public class AnimalDAO {
             throw e;
         } 
     }
+    
+    public edm.Animal getAnimalByDiioActual(int dio)
+    {
+        Session session = NewHibernateUtil.getSessionFactory().openSession();
+        try {
+            session.beginTransaction();
+
+            edm.Animal tmp = (edm.Animal) session.createCriteria(edm.Animal.class)
+                    .add(Restrictions.eq("animalDiioActual", dio))
+                    .uniqueResult();
+            
+            session.close();
+            return tmp;
+
+        } catch (Exception e) 
+        {
+            System.err.print(e.getMessage());
+            session.close();
+            throw e;
+        }
+    }
+    
 }
