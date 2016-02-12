@@ -91,7 +91,7 @@ public class TransportistaDAO {
         } 
     }
     
-    public edm.Transportista getTransportistaByRut(String rut)
+    public edm.Transportista getTransportistaByRut(String rut) throws Exception
     {
          Session session = NewHibernateUtil.getSessionFactory().openSession();
         try {
@@ -113,7 +113,7 @@ public class TransportistaDAO {
         
     }
     
-    public edm.Transportista getTransportistaByNombre(String nombre)
+    public edm.Transportista getTransportistaByNombre(String nombre) throws Exception
     {
          Session session = NewHibernateUtil.getSessionFactory().openSession();
         try {

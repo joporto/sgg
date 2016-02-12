@@ -112,27 +112,5 @@ public class VehiculoDAO {
         }
         
     }
-    
-    public edm.Transportista getTransportistaByNombre(String nombre) throws Exception
-    {
-         Session session = NewHibernateUtil.getSessionFactory().openSession();
-        try {
-            session.beginTransaction();
-
-            edm.Transportista tmp = (edm.Transportista) session.createCriteria(edm.Transportista.class)
-                    .add(Restrictions.eq("transportistaNombre", nombre))
-                    .uniqueResult();
-            
-            session.close();
-            return tmp;
-
-        } catch (Exception e) 
-        {
-            System.err.print(e.getMessage());
-            session.close();
-            throw e;
-        }
-        
-       
-    }
+   
 }

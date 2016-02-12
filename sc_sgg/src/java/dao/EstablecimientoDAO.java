@@ -91,7 +91,7 @@ public class EstablecimientoDAO {
         } 
     }
     
-    public edm.Establecimiento getEstablecimientoByRup(int rup)
+    public edm.Establecimiento getEstablecimientoByRup(int rup) throws Exception
     {
          Session session = NewHibernateUtil.getSessionFactory().openSession();
         try {
@@ -113,7 +113,7 @@ public class EstablecimientoDAO {
         
     }
     
-    public edm.Establecimiento getEstablecimientoByNombre(String nombre)
+    public edm.Establecimiento getEstablecimientoByNombre(String nombre) throws Exception
     {
          Session session = NewHibernateUtil.getSessionFactory().openSession();
         try {

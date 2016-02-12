@@ -91,7 +91,7 @@ public class InsumoTipoDAO {
         } 
     }
     
-    public edm.InsumoTipo getInsumoById(int id) throws Exception
+    public edm.InsumoTipo getInsumoTipoById(int id) throws Exception
     {
          Session session = NewHibernateUtil.getSessionFactory().openSession();
         try {
@@ -112,4 +112,27 @@ public class InsumoTipoDAO {
         }
         
     }
+    
+    public edm.InsumoTipo getInsumoTipoByNombre(String nombre) throws Exception
+    {
+         Session session = NewHibernateUtil.getSessionFactory().openSession();
+        try {
+            session.beginTransaction();
+
+            edm.InsumoTipo tmp = (edm.InsumoTipo) session.createCriteria(edm.InsumoTipo.class)
+                    .add(Restrictions.eq("insumotipoDs", nombre))
+                    .uniqueResult();
+            
+            session.close();
+            return tmp;
+
+        } catch (Exception e) 
+        {
+            System.err.print(e.getMessage());
+            session.close();
+            throw e;
+        }
+        
+    }
+    
 }

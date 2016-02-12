@@ -91,7 +91,7 @@ public class EstadoAnimalDAO {
         } 
     }
     
-    public edm.EstadoAnimal getEstadoAnimalById(int id)
+    public edm.EstadoAnimal getEstadoAnimalById(int id) throws Exception
     {
          Session session = NewHibernateUtil.getSessionFactory().openSession();
         try {
@@ -113,7 +113,7 @@ public class EstadoAnimalDAO {
         
     }
     
-    public List<edm.EstadoAnimal> getListByTipoEstado(int tipoEstado)
+    public List<edm.EstadoAnimal> getListByTipoEstado(int tipoEstado) throws Exception
     {
          Session session = NewHibernateUtil.getSessionFactory().openSession();
         try {
@@ -134,5 +134,27 @@ public class EstadoAnimalDAO {
         {
             session.close();
         }
+    }
+    
+    public edm.EstadoAnimal getEstadoAnimalByNombre(String nombre) throws Exception
+    {
+         Session session = NewHibernateUtil.getSessionFactory().openSession();
+        try {
+            session.beginTransaction();
+
+            edm.EstadoAnimal tmp = (edm.EstadoAnimal) session.createCriteria(edm.EstadoAnimal.class)
+                    .add(Restrictions.eq("estadoanimalDs", nombre))
+                    .uniqueResult();
+            
+            session.close();
+            return tmp;
+
+        } catch (Exception e) 
+        {
+            System.err.print(e.getMessage());
+            session.close();
+            throw e;
+        }
+        
     }
 }

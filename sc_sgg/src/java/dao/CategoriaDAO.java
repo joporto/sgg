@@ -8,12 +8,14 @@ package dao;
 import dal.NewHibernateUtil;
 import java.util.List;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 
 /**
  *
  * @author javierOporto
  */
-public class CategoriaDAO {
+public class CategoriaDAO 
+{
     public boolean add(edm.Categoria a) throws Exception {
         Session sessionA = NewHibernateUtil.getSessionFactory().openSession();
         sessionA.beginTransaction();
@@ -89,4 +91,49 @@ public class CategoriaDAO {
             throw e;
         } 
     }
+    
+    public edm.Categoria getCategoriaByName (String nombre) throws Exception
+    {
+         Session session = NewHibernateUtil.getSessionFactory().openSession();
+        try {
+            session.beginTransaction();
+
+            edm.Categoria tmp = (edm.Categoria) session.createCriteria(edm.Categoria.class)
+                    .add(Restrictions.eq("categoriaDs", nombre))
+                    .uniqueResult();
+            
+            session.close();
+            return tmp;
+
+        } catch (Exception e) 
+        {
+            System.err.print(e.getMessage());
+            session.close();
+            throw e;
+        }
+        
+    }
+    
+    public edm.Categoria getCategoriaById (int id) throws Exception
+    {
+         Session session = NewHibernateUtil.getSessionFactory().openSession();
+        try {
+            session.beginTransaction();
+
+            edm.Categoria tmp = (edm.Categoria) session.createCriteria(edm.Categoria.class)
+                    .add(Restrictions.eq("categoriaId", id))
+                    .uniqueResult();
+            
+            session.close();
+            return tmp;
+
+        } catch (Exception e) 
+        {
+            System.err.print(e.getMessage());
+            session.close();
+            throw e;
+        }
+        
+    }
+    
 }

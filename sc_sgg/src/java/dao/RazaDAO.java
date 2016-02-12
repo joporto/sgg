@@ -8,6 +8,7 @@ package dao;
 import dal.NewHibernateUtil;
 import java.util.List;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 
 /**
  *
@@ -88,5 +89,49 @@ public class RazaDAO {
             System.err.println(e.getMessage());
             throw e;
         } 
+    }
+    
+    public edm.Raza getRazaById(int id) throws Exception
+    {
+         Session session = NewHibernateUtil.getSessionFactory().openSession();
+        try {
+            session.beginTransaction();
+
+            edm.Raza tmp = (edm.Raza) session.createCriteria(edm.Raza.class)
+                    .add(Restrictions.eq("razaId", id))
+                    .uniqueResult();
+            
+            session.close();
+            return tmp;
+
+        } catch (Exception e) 
+        {
+            System.err.print(e.getMessage());
+            session.close();
+            throw e;
+        }
+        
+    }
+    
+    public edm.Proveedor getProveedorByNombre(String nombre) throws Exception
+    {
+         Session session = NewHibernateUtil.getSessionFactory().openSession();
+        try {
+            session.beginTransaction();
+
+            edm.Proveedor tmp = (edm.Proveedor) session.createCriteria(edm.Proveedor.class)
+                    .add(Restrictions.eq("proveedorNombre", nombre))
+                    .uniqueResult();
+            
+            session.close();
+            return tmp;
+
+        } catch (Exception e) 
+        {
+            System.err.print(e.getMessage());
+            session.close();
+            throw e;
+        }
+        
     }
 }

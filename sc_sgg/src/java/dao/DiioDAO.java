@@ -8,6 +8,7 @@ package dao;
 import dal.NewHibernateUtil;
 import java.util.List;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 
 /**
  *
@@ -90,4 +91,25 @@ public class DiioDAO {
         } 
     }
     
+    public edm.Diio getDiioById (int id) throws Exception
+    {
+         Session session = NewHibernateUtil.getSessionFactory().openSession();
+        try {
+            session.beginTransaction();
+
+            edm.Diio tmp = (edm.Diio) session.createCriteria(edm.Diio.class)
+                    .add(Restrictions.eq("diioId", id))
+                    .uniqueResult();
+            
+            session.close();
+            return tmp;
+
+        } catch (Exception e) 
+        {
+            System.err.print(e.getMessage());
+            session.close();
+            throw e;
+        }
+        
+    }
 }

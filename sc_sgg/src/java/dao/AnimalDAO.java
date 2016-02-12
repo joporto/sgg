@@ -91,7 +91,7 @@ public class AnimalDAO {
         } 
     }
     
-    public edm.Animal getAnimalByDiioActual(int dio)
+    public edm.Animal getAnimalByDiioActual(int dio) throws Exception
     {
         Session session = NewHibernateUtil.getSessionFactory().openSession();
         try {
