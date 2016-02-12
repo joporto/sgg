@@ -11,7 +11,6 @@ package test;
  */
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -20,7 +19,7 @@ public class testConnection {
        
         
         try {
-            
+             
             Connection conn = dal.Conexion.get();
             
             System.out.println("Conectado a la base de datos, las tablas encontradas son:");
