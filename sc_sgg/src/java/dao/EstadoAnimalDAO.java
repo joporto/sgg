@@ -8,6 +8,7 @@ package dao;
 import dal.NewHibernateUtil;
 import java.util.List;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 
 /**
  *
@@ -88,5 +89,50 @@ public class EstadoAnimalDAO {
             System.err.println(e.getMessage());
             throw e;
         } 
+    }
+    
+    public edm.EstadoAnimal getEstadoAnimalById(int id)
+    {
+         Session session = NewHibernateUtil.getSessionFactory().openSession();
+        try {
+            session.beginTransaction();
+
+            edm.EstadoAnimal tmp = (edm.EstadoAnimal) session.createCriteria(edm.EstadoAnimal.class)
+                    .add(Restrictions.eq("estadoanimalId", id))
+                    .uniqueResult();
+            
+            session.close();
+            return tmp;
+
+        } catch (Exception e) 
+        {
+            System.err.print(e.getMessage());
+            session.close();
+            throw e;
+        }
+        
+    }
+    
+    public List<edm.EstadoAnimal> getListByTipoEstado(int tipoEstado)
+    {
+         Session session = NewHibernateUtil.getSessionFactory().openSession();
+        try {
+            session.beginTransaction();
+
+            return (List<edm.EstadoAnimal>) session.createCriteria(edm.EstadoAnimal.class)
+                    .add(Restrictions.eq("tipoestadoId", tipoEstado))
+                    .list();
+            
+
+        } catch (Exception e) 
+        {
+            System.err.print(e.getMessage());
+            session.close();
+            throw e;
+        }
+         finally
+        {
+            session.close();
+        }
     }
 }

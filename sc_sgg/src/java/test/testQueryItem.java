@@ -17,14 +17,37 @@ public class testQueryItem {
     public static void main(String[] args) {
         try 
         {
-           dao.RazaDAO rdao = new dao.RazaDAO();
+            /*
+           dao.AnimalDAO rdao = new dao.AnimalDAO();
+           dao.EstadoAnimalDAO edao = new dao.EstadoAnimalDAO();
            
-            for (edm.Raza arg : rdao.getList()) {
+            System.out.println(
+           edao.getEstadoAnimalById(
+            rdao.getAnimalByDiioActual(111111).
+                    getAnimalEstadoActual()).getEstadoanimalDs());
+            
+            
+            dao.EventoTipoDAO evDao = new dao.EventoTipoDAO();
+            
+            for (edm.Eventotipo arg : evDao.getList()) {
                 
-                System.out.println(arg.getRazaNombre());
+                System.out.println(arg.getEventotipoDs());
             }
-           
-         
+            
+            dao.TipoEstadoDAO tdao = new dao.TipoEstadoDAO();
+            for (edm.TipoEstado arg : tdao.getList()) {
+                
+                System.out.println(arg.getTipoestadoDs());
+            }
+                    */
+            
+             dao.EstadoAnimalDAO eDao = new dao.EstadoAnimalDAO();
+            
+            for (edm.EstadoAnimal arg : eDao.getListByTipoEstado(2)) {
+                
+                System.out.println(arg.getEstadoanimalDs());
+            }
+ 
         } catch (Exception e) {
             
             System.out.println(e.getMessage());
